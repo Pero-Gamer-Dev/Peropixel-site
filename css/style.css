@@ -20,60 +20,91 @@ body {
   margin-left: 20px;
   text-decoration: none;
 }
-
-/* HERO */
+/* HERO SECTION FIX */
 .hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
   text-align: center;
-  margin-top: 120px;
+  overflow: hidden;
 }
 
+/* MAIN TITLE */
 .glitch {
-  font-size: 60px;
   position: relative;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #00f0ff;
+  letter-spacing: 3px;
+  line-height: 1.1;
 }
 
+/* GLITCH LAYERS */
 .glitch::before,
 .glitch::after {
   content: attr(data-text);
   position: absolute;
   left: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
+/* RED SHIFT */
 .glitch::before {
-  color: #ff00ff;
-  animation: glitch 1s infinite;
+  color: #ff00c8;
+  z-index: -1;
+  animation: glitchTop 2s infinite linear alternate-reverse;
 }
 
+/* BLUE SHIFT */
 .glitch::after {
-  color: #00ffff;
-  animation: glitch 1.5s infinite;
+  color: #00fff9;
+  z-index: -2;
+  animation: glitchBottom 2s infinite linear alternate-reverse;
 }
 
-@keyframes glitch {
+/* ANIMATIONS */
+@keyframes glitchTop {
   0% { transform: translate(0); }
-  50% { transform: translate(3px, -3px); }
+  20% { transform: translate(-3px, -2px); }
+  40% { transform: translate(-2px, 2px); }
+  60% { transform: translate(2px, -1px); }
+  80% { transform: translate(-1px, 1px); }
   100% { transform: translate(0); }
 }
 
-.cta {
-  margin-top: 30px;
-  padding: 12px 30px;
-  background: linear-gradient(45deg, #00ffff, #0077ff);
-  border: none;
-  cursor: pointer;
+@keyframes glitchBottom {
+  0% { transform: translate(0); }
+  20% { transform: translate(3px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-2px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0); }
 }
 
-/* TERMINAL */
-#terminal {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background: black;
-  padding: 15px;
-  font-family: monospace;
-  border: 1px solid #00ffff;
+/* SUBTITLE */
+.subtitle {
+  color: #00eaff;
+  font-size: 1.2rem;
+  opacity: 0.8;
 }
 
-.hidden {
-  display: none;
-    }
+/* BUTTON */
+.btn {
+  padding: 14px 40px;
+  background: linear-gradient(90deg, #00f0ff, #0077ff);
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00f0ff;
+  }
