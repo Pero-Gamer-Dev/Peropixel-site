@@ -7,19 +7,13 @@
 
 <body>
 
-<section class="hero">
-  <h1>Leaks</h1>
+<h1>Leaks</h1>
 
-  <div class="card">
-    <img id="leakImg" src="images/locked.png" width="300">
-    <p id="status">Locked</p>
-  </div>
-</section>
+<img id="leak1" src="images/locked.png" width="300">
 
 <script>
-if(localStorage.getItem("riddle1")){
-  document.getElementById("leakImg").src = "images/leak1.png";
-  document.getElementById("status").innerText = "Unlocked";
+if(localStorage.getItem("riddle_0")){
+  document.getElementById("leak1").src = "images/leak1.png";
 }
 </script>
 
