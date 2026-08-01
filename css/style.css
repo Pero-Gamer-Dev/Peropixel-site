@@ -1,0 +1,33 @@
+body {
+  background: #0a0a0a;
+  color: #00ffff;
+  font-family: Arial;
+  text-align: center;
+}
+
+.glitch {
+  font-size: 50px;
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 2px red; }
+  50% { text-shadow: -2px -2px blue; }
+  100% { text-shadow: 2px 2px red; }
+}
+
+.menu a {
+  display: block;
+  margin: 10px;
+  color: #00ffff;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: #ff00ff;
+}
+
+.hint {
+  opacity: 0.3;
+  margin-top: 50px;
+}
