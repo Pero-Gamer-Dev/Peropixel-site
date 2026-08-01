@@ -1,9 +1,27 @@
-<h1>Leaks</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Leaks</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
 
-<img src="locked.png" id="leak">
+<body>
+
+<section class="hero">
+  <h1>Leaks</h1>
+
+  <div class="card">
+    <img id="leakImg" src="images/locked.png" width="300">
+    <p id="status">Locked</p>
+  </div>
+</section>
 
 <script>
-if(localStorage.getItem("riddle1") === "solved"){
-  document.getElementById("leak").src = "real-leak.png";
+if(localStorage.getItem("riddle1")){
+  document.getElementById("leakImg").src = "images/leak1.png";
+  document.getElementById("status").innerText = "Unlocked";
 }
 </script>
+
+</body>
+</html>
