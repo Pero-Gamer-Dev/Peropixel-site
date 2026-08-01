@@ -7,29 +7,10 @@
 
 <body>
 
-<section class="hero">
-  <h1>Riddle System</h1>
+<h1>Riddle System</h1>
 
-  <div class="card">
-    <p>I work while you're offline, I never sleep.</p>
-    <input id="riddleInput" placeholder="Enter answer...">
-    <button onclick="check()">Submit</button>
-    <p id="result"></p>
-  </div>
-</section>
+<div id="riddleBox"></div>
 
-<script>
-function check() {
-  let ans = document.getElementById("riddleInput").value.toLowerCase();
-
-  if(ans === "minion"){
-    localStorage.setItem("riddle1", "true");
-    document.getElementById("result").innerHTML = "Unlocked Leak 🔓";
-  } else {
-    document.getElementById("result").innerHTML = "Incorrect...";
-  }
-}
-</script>
-
+<script src="js/riddles.js"></script>
 </body>
 </html>
