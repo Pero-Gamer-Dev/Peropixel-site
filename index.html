@@ -5,57 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Peropixel Network</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<div class="background"></div>
+<div id="particles"></div>
 
-<header class="navbar">
-  <h1 class="logo">Peropixel</h1>
+<header class="nav">
+  <div class="logo">PEROPIXEL</div>
   <nav>
-    <a href="bulletin.html">Bulletin</a>
     <a href="riddles.html">Riddles</a>
     <a href="leaks.html">Leaks</a>
-    <a href="wiki/index.html">Wiki</a>
+    <a href="bulletin.html">Bulletin</a>
     <a href="lore.html">Lore</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h2 class="glitch" data-text="PEROPIXEL NETWORK">PEROPIXEL NETWORK</h2>
-  <p class="subtitle">A world divided. A Core unstable.</p>
+  <h1 class="glitch" data-text="PEROPIXEL NETWORK">PEROPIXEL NETWORK</h1>
+  <p class="tag">The Core is failing...</p>
 
-  <div class="buttons">
-    <a href="riddles.html" class="btn primary">Start Solving</a>
-    <a href="leaks.html" class="btn secondary">View Leaks</a>
-  </div>
+  <button onclick="enterSystem()" class="cta">ENTER SYSTEM</button>
 </section>
 
-<section class="status">
-  <div class="card">
-    <h3>CORE STATUS</h3>
-    <p class="danger">UNSTABLE</p>
-  </div>
+<div id="terminal" class="hidden">
+  <p>> Initializing...</p>
+  <p>> Core Status: UNSTABLE</p>
+  <p>> Access Granted</p>
+</div>
 
-  <div class="card">
-    <h3>VERSION</h3>
-    <p>Beta 0.0.1</p>
-  </div>
-
-  <div class="card">
-    <h3>ACCESS</h3>
-    <p>Restricted</p>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Peropixel Network</p>
-</footer>
-
-<script src="js/main.js"></script>
+<script src="js/app.js"></script>
 </body>
-  </html>
+</html>
