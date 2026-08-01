@@ -1,0 +1,9 @@
+<h1>Leaks</h1>
+
+<img src="locked.png" id="leak">
+
+<script>
+if(localStorage.getItem("riddle1") === "solved"){
+  document.getElementById("leak").src = "real-leak.png";
+}
+</script>
